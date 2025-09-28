@@ -37,8 +37,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL:
-        "https://nodejs-authentication-system-l2pu.onrender.com/auth/google/callback",
+      callbackURL: process.env.CALLBACK_URL,   // ✅ dùng biến môi trường
       scope: ["profile", "email"],
     },
     function (accessToken, refreshToken, profile, callback) {
@@ -46,6 +45,7 @@ passport.use(
     }
   )
 );
+
 
 passport.serializeUser((user, done) => {
   done(null, user);
