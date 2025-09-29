@@ -12,14 +12,15 @@ POST http://localhost:3000/user/signup
 Content-Type: application/json
 
 {
-  "username": "admin",
-  "email": "admin@example.com",
+  "username": "trantien",
+  "email": "trantien3791@gmail.com",
   "password": "12345",
   "confirmPassword": "12345"
 }
 ```
 ✅ Kết quả: User mới được lưu trong MongoDB.  
 ![Register](public/results/register.png)
+![Register exist](public/results/register-exist.png)
 ![User](public/results/user.png)
 
 ---
@@ -30,7 +31,7 @@ POST http://localhost:3000/user/signin
 Content-Type: application/json
 
 {
-  "email": "admin@example.com",
+  "email": "trantien3791@gmail.com",
   "password": "12345"
 }
 ```
